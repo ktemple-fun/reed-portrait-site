@@ -1,10 +1,11 @@
 import React from "react"
 
-export default function About ({ profiles }) {
+export default function About ({ profile }) {
     return(
     <div>
-        <h1>About {profiles.ownerName}</h1>  
-        <p>{profiles.aboutMe}</p>
+        <h1>About {profile.ownerName}</h1>  
+        <p>{profile.aboutMe}</p>
+        
     </div>
     )
   }

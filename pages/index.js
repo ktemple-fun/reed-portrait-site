@@ -7,10 +7,11 @@ import NavMenu from '../components/navMenu';
 import Contact from '../components/contactCard'
 import VideoDisplay from '../components/videoDisplay';
 import Footer from '../components/footer';
+import HeaderCarousel from '../components/carousel';
 import { GraphQLClient } from 'graphql-request';
 
 
-export default function Home({photographyServices, profiles}) {
+export default function Home({photographyServices, profile, carouselPhotos}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,11 +20,12 @@ export default function Home({photographyServices, profiles}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavMenu />
-      <h1>{profiles.businessName}</h1>
+      <h1>{profile.businessName}</h1>
+      <HeaderCarousel carouselPhotos={carouselPhotos}/>
       <Services photographyServices={photographyServices}/>
-      <About profiles={profiles}/>
+      <About profile={profile}/>
       <VideoDisplay/>
-      <Contact profiles={profiles}/>
+      <Contact profile={profile}/>
       <Footer/>
     </div>
   )
@@ -45,37 +47,45 @@ const hygraph = new GraphQLClient(
 
 
   const QUERY = gql`
-  query Services {
-    photographyServices {
-      id
-      serviceTitle
-      photoSamples {
+
+    query Services {
+      photographyServices {
         id
+        serviceTitle
+        photoSamples {
+          id
+        }
       }
-    }
-    profiles {
-      id
-      phoneNumber
-      ownerName
-      profilePhoto {
+      profile(where: {businessName: "Profile Photography"}) {
+        aboutMe
+        address
+        businessName
+        emailAddress
+        ownerName
+        phoneNumber
+        profilePhoto {
+          id
+        }
+      }
+      carouselPhotos {
         id
+        carouselPhotos {
+          height
+          size
+          width
+          id
+        }
       }
-      businessName
-      address
-      aboutMe
-      emailAddress
-    }
   }
   `
   
   export async function getStaticProps() {
-    const { photographyServices, profiles } = await hygraph.request(QUERY)
-    console.log(photographyServices)
-    console.log(profiles)
+    const { photographyServices, profile, carouselPhotos } = await hygraph.request(QUERY)
     return {
       props: {
         photographyServices,
-        profiles
+        profile,
+        carouselPhotos
       }
     }
   }

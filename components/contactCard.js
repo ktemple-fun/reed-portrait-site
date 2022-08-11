@@ -1,13 +1,13 @@
 import React from "react"
 
-export default function ContactCard ({ profiles }) {
+export default function ContactCard ({ profile }) {
     return(
     <div>
-        <h6>{profiles.businessName}</h6>
-        <p>{profiles.ownerName}</p>
-        <p>{profiles.phoneNumber}</p>
-        <p>{profiles.emailAddress}</p>
-        <p>{profiles.address}</p>
+        <h6>{profile.businessName}</h6>
+        <p>{profile.ownerName}</p>
+        <p>{profile.phoneNumber}</p>
+        <p>{profile.emailAddress}</p>
+        <p>{profile.address}</p>
     </div>
     )
   }
