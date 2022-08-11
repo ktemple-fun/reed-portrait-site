@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Contact ({ profiles }) {
+export default function ContactCard ({ profiles }) {
     return(
     <div>
         <h6>{profiles.businessName}</h6>

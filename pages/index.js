@@ -1,11 +1,11 @@
 import React from "react"
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Services from './services'
-import About from './about'
+import Services from '../components/services'
+import About from '../components/aboutCard'
 import NavMenu from '../components/navMenu';
-import Contact from './contact'
-import VideoDisplay from './videoDisplay';
+import Contact from '../components/contactCard'
+import VideoDisplay from '../components/videoDisplay';
 import Footer from '../components/footer';
 import { GraphQLClient } from 'graphql-request';
 
@@ -70,8 +70,8 @@ const hygraph = new GraphQLClient(
   
   export async function getStaticProps() {
     const { photographyServices, profiles } = await hygraph.request(QUERY)
-    // console.log(photographyServices)
-    // console.log(profiles)
+    console.log(photographyServices)
+    console.log(profiles)
     return {
       props: {
         photographyServices,
