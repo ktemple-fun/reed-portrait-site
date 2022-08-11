@@ -1,11 +1,12 @@
+import React from "react"
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Services from './services'
 import About from './about'
-import NavMenu from './navMenu';
+import NavMenu from '../components/navMenu';
 import Contact from './contact'
 import VideoDisplay from './videoDisplay';
-import Footer from './footer';
+import Footer from '../components/footer';
 import { GraphQLClient } from 'graphql-request';
 
 
@@ -18,7 +19,7 @@ export default function Home({photographyServices, profiles}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavMenu />
-      <h1>{profiles.buisnessName}</h1>
+      <h1>{profiles.businessName}</h1>
       <Services photographyServices={photographyServices}/>
       <About profiles={profiles}/>
       <VideoDisplay/>
@@ -59,7 +60,7 @@ const hygraph = new GraphQLClient(
       profilePhoto {
         id
       }
-      buisnessName
+      businessName
       address
       aboutMe
       emailAddress
@@ -69,8 +70,8 @@ const hygraph = new GraphQLClient(
   
   export async function getStaticProps() {
     const { photographyServices, profiles } = await hygraph.request(QUERY)
-    console.log(photographyServices)
-    console.log(profiles)
+    // console.log(photographyServices)
+    // console.log(profiles)
     return {
       props: {
         photographyServices,
