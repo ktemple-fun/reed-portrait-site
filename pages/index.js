@@ -54,6 +54,9 @@ const hygraph = new GraphQLClient(
         serviceTitle
         photoSamples {
           id
+          url
+          width
+          height
         }
       }
       profile(where: {businessName: "Profile Photography"}) {
@@ -65,13 +68,16 @@ const hygraph = new GraphQLClient(
         phoneNumber
         profilePhoto {
           id
+          url
+          width
+          height
         }
       }
       carouselPhotos {
         id
         carouselPhotos {
           height
-          size
+          url
           width
           id
         }
