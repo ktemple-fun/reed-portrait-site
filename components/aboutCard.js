@@ -1,15 +1,16 @@
-import Image from 'next'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
 
 export default function About ({ profile }) {
     return(
-    <div>
-        <h1>About {profile.ownerName}</h1>  
-        <p>{profile.aboutMe}</p>
-        <Image
+    <div className={styles.AboutSection}>
+         <Image
             src={profile.profilePhoto.url}
-            width={profile.profilePhoto.width}
-            height={profile.profilePhoto.height}
+            width="550"
+            height="400"
         />
+        <h1 >About {profile.ownerName}</h1>  
+        <p>{profile.aboutMe}</p>
     </div>
     )
   }
