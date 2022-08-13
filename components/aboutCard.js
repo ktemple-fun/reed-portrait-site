@@ -8,9 +8,12 @@ export default function About ({ profile }) {
             src={profile.profilePhoto.url}
             width="550"
             height="400"
+            className={styles.AboutImage}
         />
-        <h1 >About {profile.ownerName}</h1>  
-        <p>{profile.aboutMe}</p>
+        <div className={styles.AboutTitle}>
+            <h1>About {profile.ownerName}</h1>  
+            <p>{profile.aboutMe}</p>
+        </div>
     </div>
     )
   }
