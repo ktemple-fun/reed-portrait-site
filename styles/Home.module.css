@@ -134,3 +134,31 @@
     align-items:center;
     border-bottom: 1px solid #eaeaea;
   }
+
+  .ServiceCards{
+    justify-content:space-around;
+    align-items:center;
+    flex-direction: row;
+  }
+  .ServiceCards h3{
+    text-align: center;
+  }
+  .TitleAlign{
+    text-align:center;
+  }
+  .AboutSection{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+  .AboutImage{
+    grid-row: 1,2;
+    grid-column:1,2;
+  }
+  .AboutTitle{
+    grid-row: 1,2;
+    grid-column:2,3;
+    text-align: center;
+  }
+  .Video{
+    text-align: center;
+  }
