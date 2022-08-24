@@ -11,6 +11,8 @@ export default function HeaderCarousel ({ carouselPhotos }) {
         src={url}
         width={width}
         height={height}
+        rel="preload"
+        priority="true"
     />
       ))} 
       </Carousel>

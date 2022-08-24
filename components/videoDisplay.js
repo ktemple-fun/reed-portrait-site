@@ -16,8 +16,10 @@ export default class VideoDisplay
           return (
             <div className={styles.Video}>
               <h3>GeeksforGeeks - Youtube</h3>
-              <YouTube videoId="sTnm5jvjgjM" 
-                  opts={opts} onReady={this._onReady} />
+              <div className={styles.videocontainer}>
+                <YouTube videoId="sTnm5jvjgjM" 
+                    opts={opts} onReady={this._onReady} />
+              </div>
             </div>
           );
         }
