@@ -20,7 +20,7 @@ export default function ContactCard ({ profile }) {
     });
 
     return(
-    <div className={styles.ContactCard}>
+    <div className={styles.ContactCard} id="contactCard">
         <div className={styles.ContactInfo}>
             <h2>{profile.businessName}</h2>
             <p>{profile.ownerName}</p>

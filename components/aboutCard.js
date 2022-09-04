@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 
 export default function About ({ profile }) {
     return(
-    <div className={styles.AboutSection}>
+    <div className={styles.AboutSection} id="aboutCard">
          <Image
             src={profile.profilePhoto.url}
             width="750"

@@ -9,7 +9,7 @@ import styles from '../styles/Home.module.css'
 
   export default function Services ({ photographyServices }) {
     return(
-    <div>
+    <div id="serviceCard">
       <h1 className={styles.TitleAlign}>Services Available</h1> 
       <Grid className={styles.ServiceCards} container direction ="row" >
       {photographyServices.map(({id, photoSamples, serviceTitle}) => (

@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Services from '../components/services'
@@ -9,11 +9,29 @@ import VideoDisplay from '../components/videoDisplay';
 import Footer from '../components/footer';
 import HeaderCarousel from '../components/carousel';
 import { GraphQLClient } from 'graphql-request';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Script from 'next/script'
+import { gql } from 'graphql-request';
 
 
 
 export default function Home({photographyServices, profile, carouselPhotos}) {
+  const [visible, setVisible] = React.useState(false)
+  if (typeof window !== "undefined") {
+ 
+    const toggleVisible = () => {
+      const scrolled = document.documentElement.scrollTop;
+      if (scrolled > 300){
+        setVisible(true)
+      } 
+      else if (scrolled <= 300){
+        setVisible(false)
+      }
+    };
+    
+    window.addEventListener('scroll', toggleVisible)
+    }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -30,10 +48,10 @@ export default function Home({photographyServices, profile, carouselPhotos}) {
       <VideoDisplay/>
       <Contact profile={profile}/>
       <Footer profile={profile}/>
+      <a href="#" className={styles.backToTop}  style={{display: visible ? 'inline' : 'none'}} title="Back To Top"><ArrowUpwardIcon/></a>
     </div>
   )
 }
-
 
 
 
@@ -45,8 +63,6 @@ const hygraph = new GraphQLClient(
       }
     }
   );
-
-  import { gql } from 'graphql-request';
 
 
 
