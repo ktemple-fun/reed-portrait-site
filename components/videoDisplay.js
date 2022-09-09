@@ -15,7 +15,7 @@ export default class VideoDisplay
         
           return (
             <div className={styles.Video} id="videoCard">
-              <h3>GeeksforGeeks - Youtube</h3>
+              <h3>SAMPLE VIDEO</h3>
               <div className={styles.videocontainer}>
                 <YouTube videoId="sTnm5jvjgjM" 
                     opts={opts} onReady={this._onReady} />

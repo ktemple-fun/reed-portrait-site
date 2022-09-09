@@ -1,3 +1,4 @@
+
 .container {
   padding: 0 2rem;
 }
@@ -61,9 +62,10 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
+  /* font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace; */
+  font-family: 'Jaldi', sans-serif;
+  }
 
 .grid {
   display: flex;
@@ -134,7 +136,7 @@
     align-items:center;
     border-bottom: 1px solid #eaeaea;
     margin: 15px;
-    font-size: larger;
+    font-size: larger;;
   }
   .ServiceCards{
     justify-content:space-around;
@@ -192,10 +194,16 @@
   text-align: center;
 }
 .vMenu a:hover{
-  background-color: darkgrey;
+  background-color: #D9D9D9;
 }
 .vMenu{
   display: none;
+}
+.navMenu a{
+  padding: 20px;
+}
+.navMenu a:hover{
+  background-color: #D9D9D9;
 }
 
   @media only screen and (min-width: 320px){ 
@@ -243,6 +251,10 @@
     .ContactInfo{
       margin:auto;
     }
+    .Carousel{
+      margin-left: 75px;
+      margin-right: 75px;
+    }
     
   }
 
@@ -263,7 +275,6 @@
     .AboutTitle{
       grid-row: 1,2;
       grid-column:2,3;
-      text-align: center;
     }
     #map{
       height: 400px;
@@ -271,5 +282,11 @@
     .Carousel{
       margin-left: 150px;
       margin-right: 150px;
+    }
+  }
+  @media only screen and (min-width: 1440px){
+    .Carousel{
+      margin-left: 350px;
+      margin-right: 350px;
     }
   }
