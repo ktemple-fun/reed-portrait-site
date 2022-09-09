@@ -27,12 +27,12 @@ export default function NavMenu(){
             <a href="#contactCard">Contact</a>
         </Grid>
         <MenuIcon className={styles.HamMenu} onClick={toggleVisible()} />
-        <div className={styles.vMenu} style={{display: visible ? 'block' : 'none'}} id="myLinks">
+        {/* <div className={styles.vMenu} style={{display: visible ? 'block' : 'none'}} id="myLinks">
             <a href="#serviceCard">Services</a>
             <a href="#aboutCard">About</a>
             <a href="#videoCard">Video</a>
             <a href="#contactCard">Contact</a>
-        </div>
+        </div> */}
         </div>
      );
 }

@@ -136,7 +136,6 @@
     margin: 15px;
     font-size: larger;
   }
-
   .ServiceCards{
     justify-content:space-around;
     align-items:center;
@@ -268,5 +267,9 @@
     }
     #map{
       height: 400px;
+    }
+    .Carousel{
+      margin-left: 150px;
+      margin-right: 150px;
     }
   }
