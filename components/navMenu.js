@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function NavMenu(){
     
-    const [visible, setVisible] = React.useState(false)
+    const [visible, setVisible] = useState(false)
  
     const toggleVisible = () => {
       if (visible === false){
@@ -15,9 +15,6 @@ export default function NavMenu(){
         setVisible(false)
       }
     };
-    
-
-    
     return(
         <div>
         <Grid className={styles.navMenu} container direction ="row" >
@@ -28,7 +25,7 @@ export default function NavMenu(){
             <a href="#videoCard">VIDEO</a>
             <a href="#contactCard">GET IN TOUCH</a>
         </Grid>
-        <MenuIcon className={styles.HamMenu} onClick={toggleVisible()} />
+        {/* <MenuIcon className={styles.HamMenu} onClick={toggleVisible()} /> */}
         {/* <div className={styles.vMenu} style={{display: visible ? 'block' : 'none'}} id="myLinks">
             <a href="#serviceCard">Services</a>
             <a href="#aboutCard">About</a>
