@@ -13,8 +13,8 @@ export default function About ({ profile }) {
             priority="true"
         />
         <div className={styles.AboutTitle}>
-            <h1 className={styles.TitleAlign}>About {profile.businessName}</h1>  
-            <p className={styles.TitleAlign}>{profile.aboutMe}</p>
+            <h1 className={styles.TitleAlign}>ABOUT {profile.businessName}</h1>  
+            <p>{profile.aboutMe}</p>
         </div>
     </div>
     )
