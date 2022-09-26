@@ -51,7 +51,7 @@ export default function Home({ photographyServices, profile, carouselPhotos }) {
       </Head>
 
       <NavMenu />
-      <HamburgerMenu /> 
+      <HamburgerMenu/>
       
       <HeaderCarousel carouselPhotos={carouselPhotos} />
       <BuisnessBlurb profile={profile} />
