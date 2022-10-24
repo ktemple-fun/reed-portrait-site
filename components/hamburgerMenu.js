@@ -1,9 +1,15 @@
 import React from "react";
+import Image from "next/image"
 import Link from 'next/link'
 import { slide as Menu } from 'react-burger-menu'
 
-const HamburgerMenu = () => (<div className='relative p-2 HamMenu'>
+const HamburgerMenu = ({profile}) => (<div className='relative p-2 HamMenu'>
     <Menu customBurgerIcon={<HamburgerIcon />} width={'auto'} className='left-0 top-12' >
+    <Image
+            src={profile.logo.url}
+            width="150px"
+            height="100px"
+            />
         <Links />
     </Menu>
 </div>)
