@@ -14,13 +14,11 @@ import Script from "next/script";
 import { gql } from "graphql-request";
 import BuisnessBlurb from "../components/buisnessBlurb";
 import HamburgerMenu from "../components/hamburgerMenu";
-import { exactProp } from "@mui/utils";
 
 export default function Home({ photographyServices, profile, carouselPhotos }) {
+ 
+ //fpr return to top menu
   const [visible, setVisible] = React.useState(false);
-  const closeMenu = () => {
-    setNavbarOpen(false);
-  };
   if (typeof window !== "undefined") {
     const toggleVisible = () => {
       const scrolled = document.documentElement.scrollTop;
@@ -50,8 +48,8 @@ export default function Home({ photographyServices, profile, carouselPhotos }) {
         />
       </Head>
 
-      <NavMenu />
-      <HamburgerMenu /> 
+      <NavMenu profile={profile}/>
+      <HamburgerMenu profile={profile}/>
       
       <HeaderCarousel carouselPhotos={carouselPhotos} />
       <BuisnessBlurb profile={profile} />
@@ -100,6 +98,12 @@ const QUERY = gql`
       profilePhoto {
         id
         url
+        width
+        height
+      }
+      logo{
+        url
+        id
         width
         height
       }

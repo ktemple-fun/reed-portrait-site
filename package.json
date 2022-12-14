@@ -23,7 +23,8 @@
     "react-icons": "^4.4.0",
     "react-material-ui-carousel": "^3.4.2",
     "react-scroll-parallax": "^3.3.1",
-    "react-youtube": "^9.0.3"
+    "react-youtube": "^9.0.3",
+    "tall": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "8.20.0",

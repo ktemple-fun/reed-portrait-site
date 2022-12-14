@@ -215,17 +215,8 @@
   .AboutTitle {
     margin: auto;
   }
-  .HamMenu {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 35px;
-    z-index: 99;
-    background-color: grey;
-    color: white;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 30px;
+  .Carousel{
+    margin-top: 60px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -237,9 +228,7 @@
   .vMenu {
     display: none;
   }
-  .HamMenu {
-    display: none;
-  }
+
   .ContactCard {
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -252,13 +241,11 @@
   .Carousel {
     margin-left: 75px;
     margin-right: 75px;
+    margin-top: 0px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .HamMenu {
-    display: none;
-  }
   .AboutSection {
     display: grid;
     grid-template-columns: 2fr 2fr;
