@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
 
-export default function BuisnessBlurb ({ profile }) {
+export default function BusinessBlurb ({ profile }) {
     return(
     <div className={styles.TitleAlign}>
         {profile.aboutBusiness.map((line) => (

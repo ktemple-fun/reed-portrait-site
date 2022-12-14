@@ -5,8 +5,6 @@ import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid'
 import styles from '../styles/Home.module.css'
 
-
-
   export default function Services ({ photographyServices }) {
     return(
     <div id="serviceCard">

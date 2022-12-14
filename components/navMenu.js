@@ -13,6 +13,7 @@ export default function NavMenu({profile}){
             width="150px"
             height="100px"
             />
+            <h2>Go 2 You Portraits</h2>
             <a href="#aboutCard">ABOUT</a>
             <a href="#aboutCard">GALLERY</a>
             <a href="#serviceCard">SERVICES</a>
